@@ -19,14 +19,11 @@
    
    @section('content')
    <p>ここが本文のコンテンツです。</p>
-   <p>必要なだけ記述できます。</p>
-   @section('content')
+   <p>Controller value<br>'message' = {{$message}}</p>
+   <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
+   @endsection
 
-   <p>ここが本文のコンテンツです。</p>
-   <ul>
-   @each('components.item', $data, 'item')
-   </ul>
-@endsection
+
 
 </body>
 </html>
