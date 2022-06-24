@@ -35,3 +35,11 @@ Route::post('jissyu4', 'jissyu3_2Contreller@post');
 
 //jissyu3_3
 Route::get('jissyu5','jissyu3_3Contreller@index');
+
+// use App\Http\Middleware\HelloMiddleware;を追記
+
+Route::get('hello', 'HelloController@index')
+   ->middleware(HelloMiddleware::class);
+
+Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
