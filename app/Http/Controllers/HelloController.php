@@ -47,6 +47,5 @@ class HelloController extends Controller
    }
    return view('hello.index', ['msg'=>'正しく入力されました！']);
 }
-
 }
 ?>

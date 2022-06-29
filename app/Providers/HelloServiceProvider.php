@@ -14,5 +14,3 @@ class HelloServiceProvider extends ServiceProvider
     }
 
 }
-
-
