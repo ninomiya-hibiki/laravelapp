@@ -25,16 +25,10 @@ Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
 
-//jissyu3_1
-Route::get('jissyu3', 'jissyu3_1Controller@index');
-Route::post('jissyu3', 'jissyu3_1Controller@post');
 
-//jissyu3_2
-Route::get('jissyu4', 'jissyu3_2Controller@index');
-Route::post('jissyu4', 'jissyu3_2Contreller@post');
 
 //jissyu3_3
-Route::get('jissyu5','jissyu3_3Contreller@index');
+Route::get('jissyu5','jissyu3_3Controller@index');
 
 // use App\Http\Middleware\HelloMiddleware;を追記
 

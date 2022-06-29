@@ -14,8 +14,8 @@
    </style>
 </head>
 <body>
-   <h1>@___(11)___('title')</h1>
-   <h2>@yield('___(12)___')</h2>
+   <h1>@yield('title')</h1>
+   <h2>@yield('menu_title')</h2>
 <div class="menu_content">
    @yield('menu_content')
    </div>

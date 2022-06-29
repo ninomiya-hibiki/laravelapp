@@ -8,7 +8,7 @@ class Jissyu3_3Controller extends Controller
 {
     public function index()
     {
-        return view('jissyu3_3.index.blade.php');
+        return view('jissyu3_3.index');
     }
 
-}
+} 

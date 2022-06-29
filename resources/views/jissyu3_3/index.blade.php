@@ -1,26 +1,37 @@
-@extends('___(4)___')
+@extends('layouts.jissyu')
 
-@section('title', '___(5)___')
+@section('title', 'Index')
 
-@___(6)___('menu_title')
+@section('menu_title')
 Laravelについて
- @___(7)___
+@endsection
 
-@section('___(8)___')
-    <ul>
+@section('menu_content')
+<ul>
     <li>特徴</li>
     <li>バージョン</li>
 </ul>
- @endsection
+@___(1)___('___(2)___')
+@___(3)___('menu_title')
+特徴
+@___(4)___
 
-@section('___(9)___')
-   <p>開発元:Taylor Otwell</p>
-   <p>初版:2011年6月</p>
+@slot('menu_content')
+<p>Laravelは、MVCのWebアプリケーション開発用の無料・オープンソースのPHPで書かれたWebアプリケーションフレームワークである。</p>
+@endslot
+@___(5)___
+@endsection
+
+@section('content')
+    <p>開発元:Taylor Otwell</p>
+    <p>初版:2011年6月</p>
 <p>プログラミング言語:PHP</p>
 <p>対応OS:クロスプラットフォーム</p>
 <p>公式サイト:laravel.com</p>
+@___(6)___('___(7)___', ['subview_title'=>'バージョン',
+'subview_content'=>'2020年3月より最新バージョンは7。PHPは7.2.5以上。'])
 @endsection
 
 @section('footer')
-___(10)___
+copyright 2020 東京情報クリエイター高額院専門学校
 @endsection
