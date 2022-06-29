@@ -1,0 +1,6 @@
+@startuml
+title シーケンス図
+actor ユーザー as A
+Boundary トイレ as B
+control sikosiko as C
+@enduml

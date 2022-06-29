@@ -37,3 +37,7 @@ Route::get('hello', 'HelloController@index')
 
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
+
+
+//jissu3_2
+Route::get('Chapter3_2Controller', 'Chapter3_2Controller@index');
