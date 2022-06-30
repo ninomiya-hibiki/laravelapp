@@ -2,5 +2,8 @@
 title シーケンス図
 actor ユーザー as A
 Boundary トイレ as B
-control sikosiko as C
+control 大便 as C
+
+A->B:駆け込む
+B->C:
 @enduml
