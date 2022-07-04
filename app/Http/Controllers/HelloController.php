@@ -75,6 +75,18 @@ public function remove(Request $request)
    DB::delete('delete from people where id = :id', $param);
    return redirect('/hello');
 }
+public function show(Request $request)
+{
+   $min = $request->min;
+   $max = $request->max;
+   $items = DB::table('people')
+       ->whereRaw('age >= ? and age <= ?',
+        [$min, $max])->get();
+   return view('hello.show', ['items' => $items]);
+}
+
+
+
 
 }
 
