@@ -88,6 +88,16 @@ public function show(Request $request)
    return view('hello.show', ['items' => $items]);
 }
 
+public function up()
+{
+   Schema::create('people', function (Blueprint $table) {
+       $table->increments('id');
+       $table->string('name');
+       $table->string('mail');
+       $table->integer('age');
+       $table->timestamps();
+   });
+}
 
 
 
