@@ -9,15 +9,23 @@ use App\Http\Requests\HelloRequest;
 use Illuminate\Support\Facades\DB;
 
 use Validator;
+
+use App\Person;
 class HelloController extends Controller
 {
-    public function index(Request $request)
+   public function index(Request $request)
 {
-   $items = DB::table('people')->orderBy('age', 'asc')->get();
-   return view('hello.index', ['items' => $items]);
+   if(isset($request->sort)){
+   $sort = $request->sort;
+   }else{
+      $sort='age';
+   }
+   $items = Person::orderBy($sort, 'asc')
+      ->simplePaginate(5);
+   $param = ['items' => $items, 'sort' => $sort];
+   return view('hello.index', $param);
 }
 
-    
 
    public function post(Request $request)
    {
