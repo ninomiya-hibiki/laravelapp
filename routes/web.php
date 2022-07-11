@@ -84,3 +84,11 @@ Route::post('board/add', 'BoardController@create');
 Route::get('jissyu13', 'Jissyu6_1Controller@find');
 Route::post('jissyu13', 'Jissyu6_1Controller@index');
 
+
+Route::resource('rest', 'RestappController');
+
+Route::get('hello/rest', 'HelloController@rest');
+
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
+
