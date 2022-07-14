@@ -7,16 +7,13 @@ use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
-    public function index(Request $request)
-    {
-        $items = Person::all();
-        return view('person.index', ['items' => $items]);
-    }
-    public function find(Request $request)
-    {
-       return view('person.find',['input' => '']);
-    }
-    
+   public function index(Request $request)
+   {
+      $hasItems = Person::has('boards')->get();
+      $noItems = Person::doesntHave('boards')->get();
+      $param = ['hasItems' => $hasItems, 'noItems' => $noItems];
+      return view('person.index', $param);
+   }
     public function search(Request $request)
 {
    $min = $request->input * 1;
@@ -65,4 +62,5 @@ public function remove(Request $request)
    Person::find($request->id)->delete();
    return redirect('/person');
 }
+
 }
