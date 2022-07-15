@@ -79,43 +79,18 @@ Route::get('board', 'BoardController@index');
 Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create');
 
-<<<<<<< HEAD
-
-//6_1
-Route::get('jissyu13', 'Jissyu6_1Controller@find');
-Route::post('jissyu13', 'Jissyu6_1Controller@index');
+//効果測定2
+Route::get('kouka2_1', 'Kouka2_1Controller@index');
+Route::post('kouka2_1/find', 'Kouka2_1Controller@find');
 
 
-Route::resource('rest', 'RestappController');
-
-Route::get('hello/rest', 'HelloController@rest');
-
-Route::get('hello/session', 'HelloController@ses_get');
-Route::post('hello/session', 'HelloController@ses_put');
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('hello/auth', 'HelloController@getAuth');
-Route::post('hello/auth', 'HelloController@postAuth');
-=======
-//6_1
-Route::get('jissyu13', 'Jissyu6_1Controller@index');
-Route::post('/jissyu13/find', 'jissyu6_1Controller@find');
-
-
-//6_3
-Route::get('jissyu14', 'Jissyu6_3Controller@index');
-Route::post('jissyu14/find', 'Jissyu6_3Controller@find');
-Route::get('jissyu14/show', 'Jissyu6_3Controller@show');
-Route::get('jissyu14/add', 'Jissyu6_3Controller@add');
-Route::post('jissyu14/create', 'Jissyu6_3Controller@create');
-Route::get('jissyu14/edit', 'Jissyu6_3Controller@edit');
-Route::post('jissyu14/update', 'Jissyu6_3Controller@update');
-Route::get('jissyu14/del', 'Jissyu6_3Controller@del');
-Route::post('jissyu14/remove', 'Jissyu6_3Controller@remove');
-
-
->>>>>>> jissyu6_1
+//効果測定2_2
+Route::get('kouka2_2', 'Kouka2_2Controller@index');
+Route::post('kouka2_2/find', 'Kouka2_2Controller@find');
+Route::get('kouka2_2/show', 'Kouka2_2Controller@show');
+Route::get('kouka2_2/add', 'Kouka2_2Controller@add');
+Route::post('kouka2_2/create', 'Kouka2_2Controller@create');
+Route::get('kouka2_2/edit', 'Kouka2_2Controller@edit');
+Route::post('kouka2_2/update', 'Kouka2_2Controller@update');
+Route::get('kouka2_2/del', 'Kouka2_2Controller@del');
+Route::post('kouka2_2/remove', 'Kouka2_2Controller@remove');
